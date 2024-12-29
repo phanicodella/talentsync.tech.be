@@ -1,8 +1,12 @@
- 
-const envConfig = {
-    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
-    API_URL: process.env.API_URL,
-    MONGODB_URI: process.env.MONGODB_URI
-  };
-  
-  module.exports = envConfig;
+// backend/src/config/env.config.js
+const config = {
+    port: process.env.PORT || 5000,
+    mongoUri: process.env.MONGODB_URI,
+    openaiKey: process.env.OPENAI_API_KEY,
+    apiUrl: process.env.API_URL,
+    nodeEnv: process.env.NODE_ENV,
+    jwtSecret: process.env.JWT_SECRET,
+    allowedOrigins: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000', 'http://localhost:5000']
+};
+
+module.exports = config;

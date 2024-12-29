@@ -4,56 +4,65 @@
     "description": "TalentSync Backend Server",
     "main": "src/server.js",
     "scripts": {
-      "start": "node src/server.js",
-      "dev": "nodemon src/server.js",
-      "test": "jest",
-      "lint": "eslint .",
-      "lint:fix": "eslint . --fix",
-      "prepare": "husky install"
+        "start": "node src/server.js",
+        "dev": "nodemon src/server.js",
+        "test": "jest",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "prepare": "husky install"
     },
     "dependencies": {
-      "cors": "^2.8.5",
-      "dotenv": "^16.4.7",
-      "express": "^4.21.2",
-      "helmet": "^7.1.0",
-      "mongoose": "^8.9.2",
-      "winston": "^3.13.0"
+        "axios": "^1.7.9",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "express-validator": "^7.2.0",
+        "helmet": "^7.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.9.2",
+        "mongoose-paginate-v2": "^1.8.5",
+        "node-cache": "^5.1.2",
+        "node-fetch": "^2.7.0",
+        "openai": "^4.77.0",
+        "winston": "^3.13.0",
+        "ws": "^8.18.0"
     },
     "devDependencies": {
-      "eslint": "^8.57.0",
-      "husky": "^9.0.11",
-      "jest": "^29.7.0",
-      "nodemon": "^3.0.2",
-      "supertest": "^6.3.4"
+        "eslint": "^8.57.0",
+        "husky": "^9.0.11",
+        "jest": "^29.7.0",
+        "nodemon": "^3.0.2",
+        "supertest": "^6.3.4"
     },
     "engines": {
-      "node": ">=18.0.0"
+        "node": ">=18.0.0"
     },
     "eslintConfig": {
-      "extends": "eslint:recommended",
-      "parserOptions": {
-        "ecmaVersion": 2021,
-        "sourceType": "module"
-      },
-      "env": {
-        "node": true,
-        "es6": true,
-        "jest": true
-      },
-      "rules": {
-        "no-console": "warn"
-      }
+        "extends": "eslint:recommended",
+        "parserOptions": {
+            "ecmaVersion": 2021,
+            "sourceType": "module"
+        },
+        "env": {
+            "node": true,
+            "es6": true,
+            "jest": true
+        },
+        "rules": {
+            "no-console": "warn"
+        }
     },
     "jest": {
-      "testEnvironment": "node",
-      "coveragePathIgnorePatterns": [
-        "/node_modules/"
-      ]
+        "testEnvironment": "node",
+        "coveragePathIgnorePatterns": [
+            "/node_modules/"
+        ]
     },
     "husky": {
-      "hooks": {
-        "pre-commit": "npm run lint",
-        "pre-push": "npm test"
-      }
+        "hooks": {
+            "pre-commit": "npm run lint",
+            "pre-push": "npm test"
+        }
     }
-  }
+}
